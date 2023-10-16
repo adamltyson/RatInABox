@@ -1,0 +1,881 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>RatInABox &#8212; ratinabox</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script src="_static/documentation_options.js?v=0ad51fa4"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="canonical" href="https://RatInABox-Lab.github.io/ratinabox/index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    <p class="title logo__title">ratinabox v1.10.2</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RatInABox-Lab/ratinabox" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RatInABox-Lab/ratinabox" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ratinabox">
+<h1>RatInABox <img alt="Tests" src="https://github.com/TomGeorge1234/RatInABox/actions/workflows/test.yml/badge.svg" />   <a class="reference external" href="https://badge.fury.io/py/ratinabox"><img alt="PyPI version" src="https://badge.fury.io/py/ratinabox.svg" /></a> <a class="reference external" href="https://pepy.tech/project/ratinabox"><img alt="Downloads" src="https://static.pepy.tech/badge/ratinabox" /></a><a class="reference internal" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/logo.png"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/logo.png" class="align-right" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/logo.png" style="width: 150px;" /></a><a class="headerlink" href="#ratinabox" title="Link to this heading">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> (see <a class="reference external" href="https://www.biorxiv.org/content/10.1101/2022.08.10.503541v3">paper</a>) is a toolkit for generating synthetic behaviour and neural data for spatially and/or velocity selective cell types in complex continuous environments.</p>
+<p><a class="reference internal" href="#installing-and-importing"><span class="std std-ref">Install</span></a> | <a class="reference internal" href="#get-started"><span class="std std-ref">Demos</span></a> | <a class="reference internal" href="#feature-run-down"><span class="std std-ref">Features</span></a> | <a class="reference internal" href="#contribute"><span class="std std-ref">Contributions and Questions</span></a> | <a class="reference internal" href="#cite"><span class="std std-ref">Cite</span></a></p>
+<p>With <code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> you can:</p>
+<ul class="simple">
+<li><p><strong>Generate realistic trajectories</strong> for rats exploring complex 1 and 2D environments under a smooth random policy, an external control signal, or your own trajectory data.</p></li>
+<li><p><strong>Generate artificial neuronal data</strong> for various location- or velocity-selective cells found in the brain (e.g., but not limited to, Hippocampal cell types), or build your own more complex cell types.</p></li>
+<li><p><strong>Build and train complex multi-layer networks</strong> of cells, powered by data generated with <code class="docutils literal notranslate"><span class="pre">RatInABox</span></code>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/ratinabox.gif"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/ratinabox.gif" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/ratinabox.gif" style="width: 850px;" /></a>
+<p><code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> is an open source project welcoming <a class="reference internal" href="#contribute"><span class="std std-ref">contributions</span></a>. If you use <code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> please <a class="reference internal" href="#cite"><span class="std std-ref">cite</span></a> the paper and consider giving this repository a star ☆. It contains three classes:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Environment()</span></code>📦: The environment/maze (or “box”) that the agent lives in. 1- or 2-dimensional.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Agent()</span></code>      🐀: The agent (or “rat”) moving around the <code class="docutils literal notranslate"><span class="pre">Environment</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Neurons()</span></code>    🧠: A population of neurons with firing rates determined by the state (position and velocity) of the <code class="docutils literal notranslate"><span class="pre">Agent</span></code>. Make your own or use one of our premade cell types including:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PlaceCells()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GridCells()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BoundaryVectorCells()</span></code> (egocentric or allocentric)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ObjectVectorCells()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VelocityCells()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SpeedCells()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FieldOfViewNeurons()</span></code> (egocentric encoding of what the <code class="docutils literal notranslate"><span class="pre">Agent</span></code> can see)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RandomSpatialNeurons()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HeadDirectionCells()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FeedForwardLayer()</span></code> (a generic class analagous to a feedforward layer in a deep neural network)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NeuralNetworkNeurons()</span></code> (a generic class analagous to a deep neural network)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SuccessorFeatures()</span></code></p></li>
+<li><p>…</p></li>
+</ul>
+</li>
+</ol>
+<p>The top animation shows an example use case: an <code class="docutils literal notranslate"><span class="pre">Agent</span></code> randomly explores a 2D <code class="docutils literal notranslate"><span class="pre">Environment</span></code> with a wall. Three populations of <code class="docutils literal notranslate"><span class="pre">Neurons</span></code> (<code class="docutils literal notranslate"><span class="pre">PlaceCells</span></code>, <code class="docutils literal notranslate"><span class="pre">GridCells</span></code>, <code class="docutils literal notranslate"><span class="pre">BoundaryVectorCells</span></code>) fire according to the receptive fields shown. All data is saved into the history for downstream use. <code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> is fully continuous in space; this means that position and neural firing rates are calculated rapidly online with float precision rather than pre-calculated over a discretised mesh. <code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> is flexibly discretised in time; <code class="docutils literal notranslate"><span class="pre">dt</span></code> can be set by the user (defaulting to 10 ms) depending on requirements.</p>
+<section id="key-features">
+<h2>Key features<a class="headerlink" href="#key-features" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Non-specific</strong>: Trajectories can be randomly generated, imported, or adaptively controlled making <code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> a powerful engine for many tasks involving continuous motion (e.g. control theory or <a class="reference internal" href="#policy-control"><span class="std std-ref">reinforcement learning</span></a>).</p></li>
+<li><p><strong>Biological</strong>:   Simulate large populations of spatially and/or velocity modulated cell types. Neurons can be rate based or spiking. The random motion model is fitted to match real rodent motion.</p></li>
+<li><p><strong>Flexible</strong>:     Simulate environments in 1D or 2D with arbitrarily wall, boundary and hole arrangements.  Combine premade or bespoke <code class="docutils literal notranslate"><span class="pre">Neurons</span></code> classes into arbitrary deep networks (examples given).</p></li>
+<li><p><strong>Fast</strong>:         Simulating 1 minute of exploration in a 2D environment with 100 place cells (dt=10 ms) take just 2 seconds on a laptop (no GPU needed).</p></li>
+<li><p><strong>Precise</strong>:      No more prediscretised positions, tabular state spaces, or jerky movement policies. It’s all continuous.</p></li>
+<li><p><strong>Easy</strong>:         Sensible default parameters mean you can have realisitic simulation data to work with in &lt;10 lines of code.</p></li>
+<li><p><strong>Visual</strong>        Plot or animate trajectories, firing rate timeseries’, spike rasters, receptive fields, heat maps, velocity histograms…using the plotting functions (<a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/list_of_plotting_fuctions.md">summarised here</a>).</p></li>
+</ul>
+<!-- 
+## Announcement about support for OpenAI's `gymnasium` <img src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/gymnasium_logo.svg" width=25> API
+A new wrapper contributed by [@SynapticSage](https://github.com/SynapticSage) allows `RatInABox` to natively support OpenAI's [`gymnasium`](https://gymnasium.farama.org) API for standardised and multiagent reinforment learning. This can be used to flexibly integrate `RatInABox` with other RL libraries such as Stable-Baselines3 etc. and to build non-trivial tasks with objectives and time dependent rewards. Check it out [here](https://github.com/TomGeorge1234/RatInABox/blob/dev/ratinabox/contribs/TaskEnv_example_files/TaskEnvironment_basics.md). -->
+</section>
+<section id="get-started">
+<h2>Get started<a class="headerlink" href="#get-started" title="Link to this heading">#</a></h2>
+<p>Many <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/">demos</a> are provided. Reading through the <a class="reference internal" href="#example-scripts"><span class="std std-ref">example scripts</span></a> (one simple and one extensive, duplicated at the bottom of the readme) these should be enough to get started. We also provide numerous interactive jupyter scripts as more in-depth case studies; for example one where <code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> is used for <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/reinforcement_learning_example.ipynb">reinforcement learning</a>, another for <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/decoding_position_example.ipynb">neural decoding</a> of position from firing rate. Jupyter scripts reproducing all figures in the <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/paper_figures.ipynb">paper</a> and <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/readme_figures.ipynb">readme</a> are also provided. All <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/">demos</a> can be run on Google Colab <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+</section>
+<section id="installing-and-importing">
+<h2>Installing and Importing<a class="headerlink" href="#installing-and-importing" title="Link to this heading">#</a></h2>
+<p><strong>Requirements</strong> are minimal (<code class="docutils literal notranslate"><span class="pre">python3</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy</span></code> and <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, listed in <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code>) and will be installed automatically.</p>
+<p><strong>Install</strong> the latest, stable version using <code class="docutils literal notranslate"><span class="pre">pip</span></code> at the command line with</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>ratinabox
+</pre></div>
+</div>
+<p>Alternatively, in particular if you would like to develop <code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> code or if you want the bleeding edge (may occasioanlly break), install from this repo using</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>https://github.com/TomGeorge1234/RatInABox.git
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>RatInABox
+<span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</pre></div>
+</div>
+<p>n.b. the “editable” <code class="docutils literal notranslate"><span class="pre">-e</span></code> handle means changes made to your clone will be reflected when you next import <code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> into your code.</p>
+<p><strong>Import</strong> into your python project with</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ratinabox</span>
+<span class="kn">from</span> <span class="nn">ratinabox.Environment</span> <span class="kn">import</span> <span class="n">Environment</span>
+<span class="kn">from</span> <span class="nn">ratinabox.Agent</span> <span class="kn">import</span> <span class="n">Agent</span>
+<span class="kn">from</span> <span class="nn">ratinabox.Neurons</span> <span class="kn">import</span> <span class="n">PlaceCells</span><span class="p">,</span> <span class="n">GridCells</span> <span class="c1">#...</span>
+</pre></div>
+</div>
+</section>
+<section id="feature-run-down">
+<h2>Feature run-down<a class="headerlink" href="#feature-run-down" title="Link to this heading">#</a></h2>
+<p>Here is a list of features loosely organised into those pertaining to</p>
+<p>(i) the <a class="reference internal" href="#i-environment-features"><span class="std std-ref">Environment</span></a></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#walls"><span class="std std-ref">Adding walls</span></a></p></li>
+<li><p><a class="reference internal" href="#complex-environments-polygons-curves-and-holes"><span class="std std-ref">Complex Environments: Polygons, curves and holes</span></a></p></li>
+<li><p><a class="reference internal" href="#objects"><span class="std std-ref">Objects</span></a></p></li>
+<li><p><a class="reference internal" href="#boundary-conditions"><span class="std std-ref">Boundary conditions</span></a></p></li>
+<li><p><a class="reference internal" href="#or-2-dimensions"><span class="std std-ref">1- or 2-dimensions</span></a></p></li>
+</ul>
+<p>(ii) the <a class="reference internal" href="#ii-agent-features"><span class="std std-ref">Agent</span></a></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#random-motion-model"><span class="std std-ref">Random motion</span></a></p></li>
+<li><p><a class="reference internal" href="#importing-trajectories"><span class="std std-ref">Importing trajectories</span></a></p></li>
+<li><p><a class="reference internal" href="#policy-control"><span class="std std-ref">Policy control</span></a></p></li>
+<li><p><a class="reference internal" href="#wall-repelling"><span class="std std-ref">Wall repelling</span></a></p></li>
+<li><p><a class="reference internal" href="#multiple-agents"><span class="std std-ref">Multiple Agents</span></a></p></li>
+<li><p><a class="reference internal" href="#advanced-agent-classes"><span class="std std-ref">Advanced Agent classes</span></a></p></li>
+</ul>
+<p>(iii) the <a class="reference internal" href="#iii-neurons-features"><span class="std std-ref">Neurons</span></a>.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#multiple-cell-types"><span class="std std-ref">Cell types</span></a></p></li>
+<li><p><a class="reference internal" href="#noise"><span class="std std-ref">Noise</span></a></p></li>
+<li><p><a class="reference internal" href="#spiking"><span class="std std-ref">Spikes vs rates</span></a></p></li>
+<li><p><a class="reference internal" href="#rate-maps"><span class="std std-ref">Plotting rate maps</span></a></p></li>
+<li><p><a class="reference internal" href="#place-cell-models"><span class="std std-ref">Place cell models</span></a></p></li>
+<li><p><a class="reference internal" href="#geometry-of-placecells"><span class="std std-ref">Place cell geometry</span></a></p></li>
+<li><p><a class="reference internal" href="#egocentric-encodings"><span class="std std-ref">Egocentric encodings</span></a></p></li>
+<li><p><a class="reference internal" href="#reinforcement-learning-and-successor-features"><span class="std std-ref">Reinforcement learning and successor features</span></a></p></li>
+<li><p><a class="reference internal" href="#neurons-as-function-approximators"><span class="std std-ref">Deep neural networks</span></a></p></li>
+<li><p><a class="reference internal" href="#creating-your-own-neuron-types"><span class="std std-ref">Create your own Neuron types</span></a></p></li>
+</ul>
+<p>(iv) <a class="reference internal" href="#iv-figures-and-animations"><span class="std std-ref">Figures and animations plotting</span></a></p>
+<p>Specific details can be found in the <a class="reference external" href="https://www.biorxiv.org/content/10.1101/2022.08.10.503541v3">paper</a>.</p>
+<section id="i-environment-features">
+<h3>(i) <code class="docutils literal notranslate"><span class="pre">Environment</span></code> features<a class="headerlink" href="#i-environment-features" title="Link to this heading">#</a></h3>
+<section id="walls">
+<h4><strong>Walls</strong><a class="headerlink" href="#walls" title="Link to this heading">#</a></h4>
+<p>Arbitrarily add walls to the environment to produce arbitrarily complex mazes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Environment</span><span class="o">.</span><span class="n">add_wall</span><span class="p">([[</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">],[</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>Here are some easy to make examples.</p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/walls.png"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/walls.png" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/walls.png" style="width: 1000px;" /></a>
+</section>
+<section id="complex-environments-polygons-curves-and-holes">
+<h4><strong>Complex <code class="docutils literal notranslate"><span class="pre">Environment</span></code>s: Polygons, curves, and holes</strong><a class="headerlink" href="#complex-environments-polygons-curves-and-holes" title="Link to this heading">#</a></h4>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">Environments</span></code> in RatInABox are square (or rectangular if <code class="docutils literal notranslate"><span class="pre">aspect</span> <span class="pre">!=</span> <span class="pre">1</span></code>). It is possible to create arbitrary environment shapes using the <code class="docutils literal notranslate"><span class="pre">&quot;boundary&quot;</span></code> parameter at initialisation.</p>
+<p>One can all add holes to the <code class="docutils literal notranslate"><span class="pre">Environment</span></code> using the <code class="docutils literal notranslate"><span class="pre">&quot;holes&quot;</span></code> parameter at initialisation. Positions sampled from the Environment (e.g. at initialisation) won’t be inside holes.</p>
+<p>Any curved environments can be made by creating a boundary of many small walls (uyse sparingly, walls may slow down computations)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#A trapezium shaped Environment</span>
+<span class="n">Env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;boundary&#39;</span><span class="p">:[[</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mf">0.2</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.2</span><span class="p">],[</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">],[</span><span class="mf">1.5</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5</span><span class="p">]],</span>
+    <span class="p">})</span>
+
+<span class="c1">#An environment with two holes making a figure of 8</span>
+<span class="n">Env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;aspect&#39;</span><span class="p">:</span><span class="mf">1.8</span><span class="p">,</span>
+    <span class="s1">&#39;holes&#39;</span> <span class="p">:</span> <span class="p">[[[</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">],[</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">],[</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">],[</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.8</span><span class="p">]],</span>
+               <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">],[</span><span class="mf">1.6</span><span class="p">,</span><span class="mf">0.2</span><span class="p">],[</span><span class="mf">1.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.8</span><span class="p">]]],</span>
+    <span class="p">})</span>
+
+<span class="c1">#A circular environment made from many small walls</span>
+<span class="n">Env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;boundary&#39;</span><span class="p">:[[</span><span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)]</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="mi">100</span><span class="p">)],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/complex_envs.png"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/complex_envs.png" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/complex_envs.png" style="width: 1000px;" /></a>
+</section>
+<section id="objects">
+<h4><strong>Objects</strong><a class="headerlink" href="#objects" title="Link to this heading">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">Environment</span></code>s can contain objects. These are used by <code class="docutils literal notranslate"><span class="pre">ObjectVectorCells</span></code> as visual cues but in theory you can hijack these to respresent many things in your <code class="docutils literal notranslate"><span class="pre">Environment</span></code> (reward ports, goal locations etc.). Objects have a <code class="docutils literal notranslate"><span class="pre">type</span></code> and a <code class="docutils literal notranslate"><span class="pre">position</span></code>
+Objects are defined by a list of points and a position. Objects can be used as visual cues (e.g. for <code class="docutils literal notranslate"><span class="pre">ObjectVectorCells</span></code>) or as obstacles (e.g. for <code class="docutils literal notranslate"><span class="pre">BoundaryVectorCells</span></code>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Envirnoment</span><span class="o">.</span><span class="n">add_object</span><span class="p">(</span><span class="nb">object</span><span class="o">=</span><span class="p">[</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.3</span><span class="p">],</span><span class="nb">type</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">Envirnoment</span><span class="o">.</span><span class="n">add_object</span><span class="p">(</span><span class="nb">object</span><span class="o">=</span><span class="p">[</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.3</span><span class="p">],</span><span class="nb">type</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">Envirnoment</span><span class="o">.</span><span class="n">add_object</span><span class="p">(</span><span class="nb">object</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.7</span><span class="p">],</span><span class="nb">type</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/objects.png"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/objects.png" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/objects.png" style="width: 300px;" /></a>
+</section>
+<section id="boundary-conditions">
+<h4><strong>Boundary conditions</strong><a class="headerlink" href="#boundary-conditions" title="Link to this heading">#</a></h4>
+<p>Boundary conditions (for default square/rectangular environments) can be “periodic” or “solid”. Place cells and the motion of the Agent will respect these boundaries accordingly.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;boundary_conditions&#39;</span><span class="p">:</span><span class="s1">&#39;periodic&#39;</span><span class="p">}</span> <span class="c1">#or &#39;solid&#39; (default)</span>
+<span class="p">)</span> 
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/boundary_conditions.png"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/boundary_conditions.png" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/boundary_conditions.png" style="width: 500px;" /></a>
+</section>
+<section id="or-2-dimensions">
+<h4><strong>1–or-2-dimensions</strong><a class="headerlink" href="#or-2-dimensions" title="Link to this heading">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> supports 1- or 2-dimensional <code class="docutils literal notranslate"><span class="pre">Environment</span></code>s. Almost all applicable features and plotting functions work in both. The following figure shows 1 minute of exploration of an <code class="docutils literal notranslate"><span class="pre">Agent</span></code> in a 1D environment with periodic boundary conditions spanned by 10 place cells.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;dimensionality&#39;</span><span class="p">:</span><span class="s1">&#39;1D&#39;</span><span class="p">}</span> <span class="c1">#or &#39;2D&#39; (default)</span>
+<span class="p">)</span> 
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/one_dimension.png"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/one_dimension.png" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/one_dimension.png" style="width: 500px;" /></a>
+</section>
+</section>
+<section id="ii-agent-features">
+<h3>(ii) <code class="docutils literal notranslate"><span class="pre">Agent</span></code> features<a class="headerlink" href="#ii-agent-features" title="Link to this heading">#</a></h3>
+<section id="random-motion-model">
+<h4><strong>Random motion model</strong><a class="headerlink" href="#random-motion-model" title="Link to this heading">#</a></h4>
+<p>By defaut the <code class="docutils literal notranslate"><span class="pre">Agent</span></code> follows a random motion policy.  Random motion is stochastic but smooth. The speed (and rotational speed, if in 2D) of an Agent take constrained random walks governed by Ornstein-Uhlenbeck processes. You can change the means, variance and coherence times of these processes to control the shape of the trajectory. Default parameters are fit to real rat locomotion data from Sargolini et al. (2006):</p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/riab_vs_sargolini.gif"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/riab_vs_sargolini.gif" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/riab_vs_sargolini.gif" style="width: 500px;" /></a>
+<p>The default parameters can be changed to obtain different style trajectories. The following set of trajectories were generated by modifying the rotational speed parameter <code class="docutils literal notranslate"><span class="pre">Agent.rotational_velocity_std</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Agent</span><span class="o">.</span><span class="n">speed_mean</span> <span class="o">=</span> <span class="mf">0.08</span> <span class="c1">#m/s</span>
+<span class="n">Agent</span><span class="o">.</span><span class="n">speed_coherence_time</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">Agent</span><span class="o">.</span><span class="n">rotation_velocity_std</span> <span class="o">=</span> <span class="mi">120</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span> <span class="c1">#radians </span>
+<span class="n">Agent</span><span class="o">.</span><span class="n">rotational_velocity_coherence_time</span> <span class="o">=</span> <span class="mf">0.08</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/motion_model.png"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/motion_model.png" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/motion_model.png" style="width: 800px;" /></a>
+</section>
+<section id="importing-trajectories">
+<h4><strong>Importing trajectories</strong><a class="headerlink" href="#importing-trajectories" title="Link to this heading">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> supports importing external trajectory data (rather than using the in built random motion policy). Imported data can be of low temporal resolution. It will be smoothly upsampled using a cubic splines interpolation technique. We provide a 10 minute trajectory from the open-source data set of Sargolini et al. (2006) ready to import. In the following figure blue shows (low resolution) trajectory data imported into an <code class="docutils literal notranslate"><span class="pre">Agent</span></code> and purple shows the smoothly upsampled trajectory taken by the <code class="docutils literal notranslate"><span class="pre">Agent</span></code> during exploration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Agent</span><span class="o">.</span><span class="n">import_trajectory</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="s1">&#39;sargolini&#39;</span><span class="p">)</span>
+<span class="c1">#or </span>
+<span class="n">Agent</span><span class="o">.</span><span class="n">import_trajectory</span><span class="p">(</span><span class="n">times</span><span class="o">=</span><span class="n">array_of_times</span><span class="p">,</span>
+                        <span class="n">positions</span><span class="o">=</span><span class="n">array_of_positions</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/imported_trajectory.png"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/imported_trajectory.png" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/imported_trajectory.png" style="width: 200px;" /></a>
+</section>
+<section id="policy-control">
+<h4><strong>Policy control</strong><a class="headerlink" href="#policy-control" title="Link to this heading">#</a></h4>
+<p>By default the movement policy is an random and uncontrolled (e.g. displayed above). It is possible, however, to manually pass a “drift_velocity” to the Agent on each <code class="docutils literal notranslate"><span class="pre">Agent.update()</span></code> step. This ‘closes the loop’ allowing, for example, Actor-Critic systems to control the Agent policy. As a demonstration that this method can be used to control the agent’s movement we set a radial drift velocity to encourage circular motion. We also use RatInABox to perform a simple model-free RL task and find a reward hidden behind a wall (the full script is given as an example script <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/reinforcement_learning_example.ipynb">here</a>)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Agent</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">drift_velocity</span><span class="o">=</span><span class="n">drift_velocity</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/motion.gif"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/motion.gif" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/motion.gif" style="width: 600px;" /></a>
+</section>
+<section id="wall-repelling">
+<h4><strong>Wall repelling</strong><a class="headerlink" href="#wall-repelling" title="Link to this heading">#</a></h4>
+<p>Under the random motion policy, walls in the environment mildly “repel” the <code class="docutils literal notranslate"><span class="pre">Agent</span></code>. Coupled with the finite turning speed this replicates an effect (known as thigmotaxis, sometimes linked to anxiety) where the <code class="docutils literal notranslate"><span class="pre">Agent</span></code> is biased to over-explore near walls and corners (as shown in these heatmaps) matching real rodent behaviour. It can be turned up or down with the <code class="docutils literal notranslate"><span class="pre">thigmotaxis</span></code> parameter.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Αgent</span><span class="o">.</span><span class="n">thigmotaxis</span> <span class="o">=</span> <span class="mf">0.8</span> <span class="c1">#1 = high thigmotaxis (left plot), 0 = low (right)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/wall_repel.png"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/wall_repel.png" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/wall_repel.png" style="width: 900px;" /></a>
+</section>
+<section id="multiple-agents">
+<h4><strong>Multiple <code class="docutils literal notranslate"><span class="pre">Agent</span></code>s</strong><a class="headerlink" href="#multiple-agents" title="Link to this heading">#</a></h4>
+<p>There is nothing to stop multiple <code class="docutils literal notranslate"><span class="pre">Agent</span></code>s being added to the same <code class="docutils literal notranslate"><span class="pre">Environment</span></code>. When plotting/animating trajectories set the kwarg <code class="docutils literal notranslate"><span class="pre">plot_all_agents=True</span></code> to visualise all <code class="docutils literal notranslate"><span class="pre">Agent</span></code>s simultaneously.</p>
+<p>The following animation shows three <code class="docutils literal notranslate"><span class="pre">Agent</span></code>s in an <code class="docutils literal notranslate"><span class="pre">Environment</span></code>. Drift velocities are set so that <code class="docutils literal notranslate"><span class="pre">Agent</span></code>s weally locally attract one another creating “interactive” behaviour.</p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/multi_agents.gif"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/multi_agents.gif" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/multi_agents.gif" style="width: 350px;" /></a>
+</section>
+<section id="advanced-agent-classes">
+<h4><strong>Advanced <code class="docutils literal notranslate"><span class="pre">Agent</span></code> classes</strong><a class="headerlink" href="#advanced-agent-classes" title="Link to this heading">#</a></h4>
+<p>One can make more advanced Agent classes, for example <code class="docutils literal notranslate"><span class="pre">ThetaSequenceAgent()</span></code> where the position “sweeps” (blue) over the position of an underlying true (regular) <code class="docutils literal notranslate"><span class="pre">Agent()</span></code> (purple), highly reminiscent of theta sequences observed when one decodes position from the hippocampal populaton code on sub-theta (10 Hz) timescales. This class can be found in the <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/tree/dev/ratinabox/contribs"><code class="docutils literal notranslate"><span class="pre">contribs</span></code></a> directory.</p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/theta_sequences.gif"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/theta_sequences.gif" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/theta_sequences.gif" style="width: 350px;" /></a>
+</section>
+</section>
+<section id="iii-neurons-features">
+<h3>(iii) <code class="docutils literal notranslate"><span class="pre">Neurons</span></code> features<a class="headerlink" href="#iii-neurons-features" title="Link to this heading">#</a></h3>
+<section id="multiple-cell-types">
+<h4><strong>Multiple cell types:</strong><a class="headerlink" href="#multiple-cell-types" title="Link to this heading">#</a></h4>
+<p>We provide a list of premade <code class="docutils literal notranslate"><span class="pre">Neurons</span></code> subclasses. These include (but are not limited to):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PlaceCells</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GridCells</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BoundaryVectorCells</span></code> (can be egocentric or allocentric)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ObjectVectorCells</span></code> (can be used as visual cues, i.e. only fire when <code class="docutils literal notranslate"><span class="pre">Agent</span></code> is looking towards them) (can be egocentric or allocentric)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HeadDirectionCells</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VelocityCells</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SpeedCells</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RandomSpatialNeurons</span></code> - smooth but random spatially tuned neurons</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FeedForwardLayer</span></code> - calculates activated weighted sum of inputs from a provide list of input <code class="docutils literal notranslate"><span class="pre">Neurons</span></code> layers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FieldOfViewNeurons</span></code> - Egocentric encoding of what the <code class="docutils literal notranslate"><span class="pre">Agent</span></code> can see</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NeuralNetworkNeurons</span></code> - Maps inputs from a user provided list of input <code class="docutils literal notranslate"><span class="pre">Neurons</span></code> through a user-provided <code class="docutils literal notranslate"><span class="pre">pytorch</span></code> neural network. Can be used to create arbitrary and learnable representations.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">FeedForwardLayer</span></code> and <code class="docutils literal notranslate"><span class="pre">NeuralNetworkNeurons</span></code> deserves special mention. Instead of its firing rate being determined explicitly by the state of the <code class="docutils literal notranslate"><span class="pre">Agent</span></code> it summates synaptic inputs from a provided list of input layers (which can be any <code class="docutils literal notranslate"><span class="pre">Neurons</span></code> subclass). This layer is the building block for how more complex networks can be studied using <code class="docutils literal notranslate"><span class="pre">RatInABox</span></code>. <code class="docutils literal notranslate"><span class="pre">NeuralNetworkNeurons</span></code> is the same except instead of linearly summating it passes inputs through any arbitrary deep neural network.</p>
+</section>
+<section id="noise">
+<h4><strong>Noise</strong><a class="headerlink" href="#noise" title="Link to this heading">#</a></h4>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">Neurons.noise_std</span></code> and <code class="docutils literal notranslate"><span class="pre">Neurons.noise_coherence_time</span></code> parameters to control the amount of noise (Hz) and autocorrelation timescale of the noise (seconds). For example (work with all <code class="docutils literal notranslate"><span class="pre">Neurons</span></code> classes, not just <code class="docutils literal notranslate"><span class="pre">PlaceCells</span></code>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PCs</span> <span class="o">=</span> <span class="n">PlaceCells</span><span class="p">(</span><span class="n">Ag</span><span class="p">,</span><span class="n">params</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;noise_std&#39;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span> <span class="c1">#defaults to 0 i.e. no noise</span>
+    <span class="s1">&#39;noise_coherence_time&#39;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span> <span class="c1">#autocorrelation timescale of additive noise vector </span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/noise.png"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/noise.png" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/noise.png" style="width: 1000px;" /></a>
+</section>
+<section id="spiking">
+<h4>Spiking<a class="headerlink" href="#spiking" title="Link to this heading">#</a></h4>
+<p>All neurons are rate based. However, at each update spikes are sampled as though neurons were Poisson neurons. These are stored in <code class="docutils literal notranslate"><span class="pre">Neurons.history['spikes']</span></code>. The max and min firing rates can be set with <code class="docutils literal notranslate"><span class="pre">Neurons.max_fr</span></code> and  <code class="docutils literal notranslate"><span class="pre">Neurons.min_fr</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Neurons</span><span class="o">.</span><span class="n">plot_ratemap</span><span class="p">(</span><span class="n">spikes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/spikes.png"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/spikes.png" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/spikes.png" style="width: 1000px;" /></a>
+</section>
+<section id="rate-maps">
+<h4><strong>Rate maps</strong><a class="headerlink" href="#rate-maps" title="Link to this heading">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">PlaceCells</span></code>, <code class="docutils literal notranslate"><span class="pre">GridCells</span></code> and allocentric <code class="docutils literal notranslate"><span class="pre">BoundaryVectorCells</span></code> (among others) have firing rates which depend exclusively on the position of the agent. These rate maps can be displayed by querying their firing rate at an array of positions spanning the environment, then plotting. This process is done for you using the function <code class="docutils literal notranslate"><span class="pre">Neurons.plot_rate_map()</span></code>.</p>
+<p>More generally, however, cells firing is not only determined by position but potentially other factors (e.g. velocity, or historical effects if the layer is part of a recurrent network). In these cases the above method of plotting rate maps will necessarily fail. A more robust way to display the receptive field is to plot a heatmap of the positions of the Agent has visited where each positions contribution to a bin is weighted by the firing rate observed at that position. Over time, as coverage become complete, the firing fields become visible.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Neurons</span><span class="o">.</span><span class="n">plot_rate_map</span><span class="p">()</span> <span class="c1">#attempts to plot &quot;ground truth&quot; rate map </span>
+<span class="n">Neurons</span><span class="o">.</span><span class="n">plot_rate_map</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;history&quot;</span><span class="p">)</span> <span class="c1">#plots rate map by firing-rate-weighted position heatmap</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/rate_map.png"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/rate_map.png" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/rate_map.png" style="width: 600px;" /></a>
+</section>
+<section id="place-cell-models">
+<h4><strong>Place cell models</strong><a class="headerlink" href="#place-cell-models" title="Link to this heading">#</a></h4>
+<p>Place cells come in multiple types (given by <code class="docutils literal notranslate"><span class="pre">params['description']</span></code>), or it would be easy to write your own:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;gaussian&quot;</span></code>: normal gaussian place cell</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;gaussian_threshold&quot;</span></code>: gaussian thresholded at 1 sigma</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;diff_of_gaussians&quot;</span></code>: gaussian(sigma) - gaussian(1.5 sigma)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;top_hat&quot;</span></code>: circular receptive field, max firing rate within, min firing rate otherwise</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;one_hot&quot;</span></code>: the closest place cell to any given location is established. This and only this cell fires.</p></li>
+</ul>
+<p>This last place cell type, <code class="docutils literal notranslate"><span class="pre">&quot;one_hot&quot;</span></code> is particularly useful as it essentially rediscretises space and tabularises the state space (gridworld again). This can be used to  contrast and compare learning algorithms acting over continuous vs discrete state spaces. This figure compares the 5 place cell models for population of 9 place cells (top left shows centres of place cells, and in all cases the <code class="docutils literal notranslate"><span class="pre">&quot;widths&quot;</span></code> parameters is set to  0.2 m, or irrelevant in the case of <code class="docutils literal notranslate"><span class="pre">&quot;one_hot&quot;</span></code>s)</p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/placecellmodels.png"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/placecellmodels.png" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/placecellmodels.png" style="width: 800px;" /></a>
+<p>These place cells (with the exception of <code class="docutils literal notranslate"><span class="pre">&quot;one_hot&quot;</span></code>s) can all be made to phase precess by instead initialising them with the <code class="docutils literal notranslate"><span class="pre">PhasePrecessingPlaceCells()</span></code> class currently residing in the <code class="docutils literal notranslate"><span class="pre">contribs</span></code> folder. This figure shows example output data.</p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/phaseprecession.png"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/phaseprecession.png" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/phaseprecession.png" style="width: 500px;" /></a>
+</section>
+<section id="geometry-of-placecells">
+<h4><strong>Geometry of <code class="docutils literal notranslate"><span class="pre">PlaceCells</span></code></strong><a class="headerlink" href="#geometry-of-placecells" title="Link to this heading">#</a></h4>
+<p>Choose how you want <code class="docutils literal notranslate"><span class="pre">PlaceCells</span></code> to interact with walls in the <code class="docutils literal notranslate"><span class="pre">Environment</span></code>. We provide three types of geometries.</p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/wall_geometry.png"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/wall_geometry.png" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/wall_geometry.png" style="width: 900px;" /></a>
+</section>
+<section id="egocentric-encodings">
+<h4><strong>Egocentric encodings</strong><a class="headerlink" href="#egocentric-encodings" title="Link to this heading">#</a></h4>
+<p>Most <code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> cell classes are allocentric (e.g. <code class="docutils literal notranslate"><span class="pre">PlaceCells</span></code>, <code class="docutils literal notranslate"><span class="pre">GridCells</span></code> etc. do not depend on the agents point of view) not egocentric. <code class="docutils literal notranslate"><span class="pre">BoundaryVectorCells</span></code> (BVCs) and <code class="docutils literal notranslate"><span class="pre">ObjectVectorCells</span></code> (OVCs) can be either. <code class="docutils literal notranslate"><span class="pre">FieldOfViewNeurons</span></code> exploit this by arranging sets of egocentric BVC or OVCs to tile to agents local field of view creating a comprehensive egocentric encoding of what boundaries or objects the agent can ‘see’ from it’s current point of view. A custom plotting function displays the tiling and the firing rates as shown below. With an adequately defined field of view these can make, for example, “whisker cells”.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">FoV_BVCs</span> <span class="o">=</span> <span class="n">FieldOfViewBVCs</span><span class="p">(</span><span class="n">Ag</span><span class="p">)</span>
+<span class="n">FoV_OVCs</span> <span class="o">=</span> <span class="n">FieldOfViewOVCs</span><span class="p">(</span><span class="n">Ag</span><span class="p">)</span>
+<span class="n">BVCs_whiskers</span> <span class="o">=</span> <span class="n">FieldOfViewBVCs</span><span class="p">(</span><span class="n">Ag</span><span class="p">,</span><span class="n">params</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;distance_range&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>  
+        <span class="s2">&quot;angle_range&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="mi">75</span><span class="p">,</span>
+            <span class="mi">105</span><span class="p">,</span>
+        <span class="p">],</span>  
+        <span class="s2">&quot;spatial_resolution&quot;</span><span class="p">:</span> <span class="mf">0.02</span><span class="p">,</span>  <span class="c1"># resolution of each OVC tiling FoV</span>
+        <span class="s2">&quot;cell_arrangement&quot;</span><span class="p">:</span> <span class="s2">&quot;uniform_manifold&quot;</span><span class="p">,</span>
+        
+<span class="p">})</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/field_of_view.gif"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/field_of_view.gif" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/field_of_view.gif" style="width: 600px;" /></a>
+</section>
+<section id="reinforcement-learning-and-successor-features">
+<h4><strong>Reinforcement Learning and Successor Features</strong><a class="headerlink" href="#reinforcement-learning-and-successor-features" title="Link to this heading">#</a></h4>
+<p>A dedicated <code class="docutils literal notranslate"><span class="pre">Neurons</span></code> class called <code class="docutils literal notranslate"><span class="pre">SuccessorFeatures</span></code> learns the successor features for a given feature set under the current policy. See <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/successor_features_example.ipynb">this demo</a> for more info.
+<a class="reference internal" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/demos/SF_development.gif"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/demos/SF_development.gif" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/demos/SF_development.gif" style="width: 600px;" /></a></p>
+<p><code class="docutils literal notranslate"><span class="pre">SuccessorFeatures</span></code> are a specific instance of a more general class of neurons called <code class="docutils literal notranslate"><span class="pre">ValueNeuron</span></code>s which learn value function for any reward density under the <code class="docutils literal notranslate"><span class="pre">Agent</span></code>s motion policy. This can be used to do reinforcement learning tasks such as finding rewards hidden behind walls etc as shown in <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/reinforcement_learning_example.ipynb">this demo</a>.</p>
+<p>We also have a working examples of and actor critic algorithm using deep neural networks <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/actor_critic_example.ipynb">here</a></p>
+<p>Finally, we are working on a dedicated subpackage – (<code class="docutils literal notranslate"><span class="pre">RATS</span></code>: RL Agent Toolkit and Simulator) – to host all this RL stuff and more so keep  an eye out.</p>
+</section>
+<section id="neurons-as-function-approximators">
+<h4><strong><code class="docutils literal notranslate"><span class="pre">Neurons</span></code> as function approximators</strong><a class="headerlink" href="#neurons-as-function-approximators" title="Link to this heading">#</a></h4>
+<p>Perhaps you want to generate really complex cell types (more complex than just <code class="docutils literal notranslate"><span class="pre">PlaceCells</span></code>, <code class="docutils literal notranslate"><span class="pre">GridCells</span></code> etc.). No problem. For this we provide two <code class="docutils literal notranslate"><span class="pre">Neurons</span></code> subclass useful for constructing complex Neuron types. For these classes instead of firing rates being determined explicitly by the state of the <code class="docutils literal notranslate"><span class="pre">Agent</span></code>, they recieve inputs from one or many other <code class="docutils literal notranslate"><span class="pre">RatInABox.Neurons</span></code> classes and pass these inputs through a function to calculate the firing rate.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">FeedForwardLayer</span></code> linearly sums their inputs with a set of weights.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NeuralNetworkNeurons</span></code> are more general, they pass their inputs through a user-provided deep neural network (for this we use <code class="docutils literal notranslate"><span class="pre">pytorch</span></code>).</p></li>
+</ul>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/functionapproximators.gif"><img alt="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/functionapproximators.gif" src="https://raw.githubusercontent.com/RatInABox-Lab/RatInABox/dev/.images/readme/functionapproximators.gif" style="width: 800px;" /></a>
+<p>Both of these classes can be used as the building block for constructing complex multilayer networks of <code class="docutils literal notranslate"><span class="pre">Neurons</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">FeedForwardLayers</span></code> are <code class="docutils literal notranslate"><span class="pre">RatInABox.Neurons</span></code> in their own right so can be used as inputs to other <code class="docutils literal notranslate"><span class="pre">FeedForwardLayers</span></code>). Their parameters can be accessed and set (or “trained”) to create neurons with complex receptive fields. In the case of <code class="docutils literal notranslate"><span class="pre">DeepNeuralNetwork</span></code> neurons the firing rate attached to the computational graph is stored so gradients can be taken. Examples can be found <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/path_integration_example.ipynb">here (path integration)</a>, <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/reinforcement_learning_example.ipynb">here (reinforcement learning)</a>, <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/successor_features_example.ipynb">here (successor features)</a> and <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/actor_critic_example.ipynb">here (actor_critic_demo)</a>.</p>
+</section>
+<section id="creating-your-own-neuron-types">
+<h4><strong>Creating your own <code class="docutils literal notranslate"><span class="pre">Neuron</span></code> types</strong><a class="headerlink" href="#creating-your-own-neuron-types" title="Link to this heading">#</a></h4>
+<p>We encourage users to create their own subclasses of <code class="docutils literal notranslate"><span class="pre">Neurons</span></code>. This is easy to do, see comments in the <code class="docutils literal notranslate"><span class="pre">Neurons</span></code> class within the <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/ratinabox/Neurons.py">code</a> for explanation. By forming these classes from the parent <code class="docutils literal notranslate"><span class="pre">Neurons</span></code> class, the plotting and analysis features described above remain available to these bespoke Neuron types.</p>
+</section>
+</section>
+<section id="iv-figures-and-animations">
+<h3>(iv) Figures and animations<a class="headerlink" href="#iv-figures-and-animations" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> is built to be highly visual. It is easy to plot or animate data and save these plots/animations. Here are some tips</p>
+<section id="saving">
+<h4><strong>Saving</strong><a class="headerlink" href="#saving" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ratinabox.figure_directory</span></code> a global variable specifying the directory into which figures/animations will be saved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ratinabox.utils.save_figure(fig,fig_name)</span></code> saves a figure (or animation) into a dated folder within the figure directory  as both <code class="docutils literal notranslate"><span class="pre">&quot;.svg&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;.png&quot;</span></code> (<code class="docutils literal notranslate"><span class="pre">&quot;.mp4&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;.gif&quot;</span></code>). The current time will be appended to the <code class="docutils literal notranslate"><span class="pre">fig_name</span></code> so you won’t ever overwrite.</p></li>
+</ul>
+</section>
+<section id="saving-but-automatically">
+<h4><strong>Saving (but automatically)</strong><a class="headerlink" href="#saving-but-automatically" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Setting <code class="docutils literal notranslate"><span class="pre">ratinabox.autosave_plots</span> <span class="pre">=</span> <span class="pre">True</span></code> means RatInABox figure will be automatically saved in the figure directory without having to indvidually call the <code class="docutils literal notranslate"><span class="pre">utils</span></code> function above.</p></li>
+</ul>
+</section>
+<section id="styling">
+<h4><strong>Styling</strong><a class="headerlink" href="#styling" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ratinabox.stylize_plots()</span></code> this call sets some global matplotlib rcParams to make plots look pretty/exactly like they do in this repo</p></li>
+</ul>
+</section>
+<section id="most-important-plotting-functions">
+<h4><strong>Most important plotting functions</strong><a class="headerlink" href="#most-important-plotting-functions" title="Link to this heading">#</a></h4>
+<p>The most important plotting functions are (see source code for the available arguments/kwargs):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Environment</span><span class="o">.</span><span class="n">plot_environment</span><span class="p">()</span> <span class="c1">#visualises current environment with walls and objects</span>
+<span class="n">Agent</span><span class="o">.</span><span class="n">plot_trajectory</span><span class="p">()</span> <span class="c1">#plots trajectory</span>
+<span class="n">Agent</span><span class="o">.</span><span class="n">animate_trajectory</span><span class="p">()</span> <span class="c1">#animate trajectory</span>
+<span class="n">Neurons</span><span class="o">.</span><span class="n">plot_rate_map</span><span class="p">()</span> <span class="c1"># plots the rate map of the neurons at all positions</span>
+<span class="n">Neurons</span><span class="o">.</span><span class="n">plot_rate_timeseries</span><span class="p">()</span> <span class="c1"># plots activities of the neurons over time </span>
+<span class="n">Neurons</span><span class="o">.</span><span class="n">animate_rate_timeseries</span><span class="p">()</span> <span class="c1"># animates the activity of the neurons over time </span>
+</pre></div>
+</div>
+<p>Most plotting functions accept <code class="docutils literal notranslate"><span class="pre">fig</span></code> and <code class="docutils literal notranslate"><span class="pre">ax</span></code> as optional arguments and if passed will plot ontop of these. This can be used to make comolex or multipanel figures. For a comprehensive list of plotting functions see <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/list_of_plotting_fuctions.md">here</a>.</p>
+</section>
+</section>
+</section>
+<section id="example-scripts">
+<h2>Example Scripts<a class="headerlink" href="#example-scripts" title="Link to this heading">#</a></h2>
+<p>In the folder called <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/">demos</a> we provide numerous script and demos which will help when learning <code class="docutils literal notranslate"><span class="pre">RatInABox</span></code>. In approximate order of complexity, these include:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/simple_example.ipynb">simple_example.ipynb</a>: a very simple tutorial for importing RiaB, initialising an Environment, Agent and some PlaceCells, running a brief simulation and outputting some data. Code copied here for convenience.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ratinabox</span> <span class="c1">#IMPORT </span>
+<span class="kn">from</span> <span class="nn">ratinabox.Environment</span> <span class="kn">import</span> <span class="n">Environment</span>
+<span class="kn">from</span> <span class="nn">ratinabox.Agent</span> <span class="kn">import</span> <span class="n">Agent</span>
+<span class="kn">from</span> <span class="nn">ratinabox.Neurons</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="c1">#INITIALISE CLASSES</span>
+<span class="n">Env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">()</span> 
+<span class="n">Ag</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span><span class="n">Env</span><span class="p">)</span>
+<span class="n">PCs</span> <span class="o">=</span> <span class="n">PlaceCells</span><span class="p">(</span><span class="n">Ag</span><span class="p">)</span>
+<span class="c1">#EXPLORE</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mi">20</span><span class="o">/</span><span class="n">Ag</span><span class="o">.</span><span class="n">dt</span><span class="p">)):</span> 
+    <span class="n">Ag</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+    <span class="n">PCs</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+<span class="c1">#ANALYSE/PLOT</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Ag</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;pos&#39;</span><span class="p">][:</span><span class="mi">10</span><span class="p">])</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">PCs</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;firingrate&#39;</span><span class="p">][:</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">Ag</span><span class="o">.</span><span class="n">plot_trajectory</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">PCs</span><span class="o">.</span><span class="n">plot_rate_timeseries</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/extensive_example.ipynb">extensive_example.ipynb</a>: a more involved tutorial. More complex enivornment, more complex cell types and more complex plots are used.</p></li>
+<li><p><a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/list_of_plotting_fuctions.md">list_of_plotting_functions.md</a>: All the types of plots available for are listed and explained.</p></li>
+<li><p><a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/readme_figures.ipynb">readme_figures.ipynb</a>: (Almost) all plots/animations shown in the root readme are produced from this script (plus some minor formatting done afterwards in powerpoint).</p></li>
+<li><p><a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/paper_figures.ipynb">paper_figures.ipynb</a>: (Almost) all plots/animations shown in the paper are produced from this script (plus some major formatting done afterwards in powerpoint).</p></li>
+<li><p><a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/decoding_position_example.ipynb">decoding_position_example.ipynb</a>: Postion is decoded from neural data generated with RatInABox. Place cells, grid cell and boundary vector cells are compared.</p></li>
+<li><p><a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/splitter_cells_example.ipynb">splitter_cells_example.ipynb</a>: A simple simultaion demonstrating how <code class="docutils literal notranslate"><span class="pre">Splittre</span></code> cell data could be create in a figure-8 maze.</p></li>
+<li><p><a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/reinforcement_learning_example.ipynb">reinforcement_learning_example.ipynb</a>: RatInABox is use to construct, train and visualise a small two-layer network capable of model free reinforcement learning in order to find a reward hidden behind a wall.</p></li>
+<li><p><a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/actor_critic_example.ipynb">actor_critic_example.ipynb</a>: RatInABox is use to implement the actor critic algorithm using deep neural networks.</p></li>
+<li><p><a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/successor_features_example.ipynb">successor_features_example.ipynb</a>: RatInABox is use to learn and visualise successor features under random and biased motion policies.</p></li>
+<li><p><a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/blob/dev/demos/path_integration_example.ipynb">path_integration_example.ipynb</a>: RatInABox is use to construct, train and visualise a large multi-layer network capable of learning a “ring attractor” capable of path integrating a position estimate using only velocity inputs.</p></li>
+</ul>
+</section>
+<section id="contribute">
+<h2>Contribute <a class="reference external" href="https://github.com/TomGeorge1234/RatInABox/graphs/contributors"><img alt="" src="https://img.shields.io/github/contributors/TomGeorge1234/RatInAbox.svg?logo=github" /></a> <a class="reference external" href="https://github.com/TomGeorge1234/RatInABox/graphs/issues-closed"><img alt="" src="https://img.shields.io/github/issues-closed/TomGeorge1234/RatInAbox.svg?logo=github" /></a> <a class="reference external" href="https://github.com/TomGeorge1234/RatInABox/pulls"><img alt="" src="https://img.shields.io/github/issues-pr-closed/TomGeorge1234/RatInAbox.svg?logo=github" /></a> <a class="reference external" href="https://github.com/TomGeorge1234/RatInABox/graphs/commit-activity"><img alt="" src="https://img.shields.io/github/commit-activity/y/TomGeorge1234/RatInABox.svg?logo=git&amp;logoColor=white" /></a><a class="headerlink" href="#contribute" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> is open source project and we actively encourage  all contributions from example bug fixes to documentation or new cell types. Feel free to make a pull request (you will need to fork the repository first) or raise and issue.</p>
+<p>We have a dedicated <a class="reference external" href="https://github.com/RatInABox-Lab/RatInABox/tree/dev/ratinabox/contribs">contribs</a> directory where you can safely add awesome scripts and new <code class="docutils literal notranslate"><span class="pre">Neurons</span></code> classes etc.</p>
+<p>Questions? Just ask! Ideally via opening an issue so others can see the answer too.</p>
+<p>Thanks to all contributors so far:
+<img alt="GitHub Contributors Image" src="https://contrib.rocks/image?repo=TomGeorge1234/RatInABox" /></p>
+</section>
+<section id="cite">
+<h2>Cite <a class="reference external" href="https://doi.org/10.1101/2022.08.10.503541"><img alt="" src="http://img.shields.io/badge/bioRxiv-10.1101/2022.08.10.503541-B31B1B.svg" /></a><a class="headerlink" href="#cite" title="Link to this heading">#</a></h2>
+<p>If you use <code class="docutils literal notranslate"><span class="pre">RatInABox</span></code> in your research or educational material, please cite the work as follows:
+Bibtex:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@article</span><span class="p">{</span><span class="n">ratinabox2022</span><span class="p">,</span>
+	<span class="n">doi</span> <span class="o">=</span> <span class="p">{</span><span class="mf">10.1101</span><span class="o">/</span><span class="mf">2022.08.10.503541</span><span class="p">},</span>
+	<span class="n">url</span> <span class="o">=</span> <span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">doi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="mf">10.1101</span><span class="o">%</span><span class="mi">2</span><span class="n">F2022</span><span class="mf">.08.10.503541</span><span class="p">},</span>
+	<span class="n">year</span> <span class="o">=</span> <span class="mi">2022</span><span class="p">,</span>
+	<span class="n">month</span> <span class="o">=</span> <span class="p">{</span><span class="n">aug</span><span class="p">},</span>
+	<span class="n">publisher</span> <span class="o">=</span> <span class="p">{</span><span class="n">Cold</span> <span class="n">Spring</span> <span class="n">Harbor</span> <span class="n">Laboratory</span><span class="p">},</span>
+	<span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Tom</span> <span class="n">M</span> <span class="n">George</span> <span class="ow">and</span> <span class="n">William</span> <span class="n">de</span> <span class="n">Cothi</span> <span class="ow">and</span> <span class="n">Claudia</span> <span class="n">Clopath</span> <span class="ow">and</span> <span class="n">Kimberly</span> <span class="n">Stachenfeld</span> <span class="ow">and</span> <span class="n">Caswell</span> <span class="n">Barry</span><span class="p">},</span>
+	<span class="n">title</span> <span class="o">=</span> <span class="p">{{</span><span class="n">RatInABox</span><span class="p">}:</span> <span class="n">A</span> <span class="n">toolkit</span> <span class="k">for</span> <span class="n">modelling</span> <span class="n">locomotion</span> <span class="ow">and</span> <span class="n">neuronal</span> <span class="n">activity</span> <span class="ow">in</span> <span class="n">continuous</span> <span class="n">environments</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Formatted:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Tom</span> <span class="n">M</span> <span class="n">George</span><span class="p">,</span> <span class="n">William</span> <span class="n">de</span> <span class="n">Cothi</span><span class="p">,</span> <span class="n">Claudia</span> <span class="n">Clopath</span><span class="p">,</span> <span class="n">Kimberly</span> <span class="n">Stachenfeld</span><span class="p">,</span> <span class="n">Caswell</span> <span class="n">Barry</span><span class="o">.</span> <span class="s2">&quot;RatInABox: A toolkit for modelling locomotion and neuronal activity in continuous environments&quot;</span> <span class="p">(</span><span class="mi">2022</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>The research paper corresponding to the above citation can be found <a class="reference external" href="https://www.biorxiv.org/content/10.1101/2022.08.10.503541v3">here</a>.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features">Key features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-started">Get started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-importing">Installing and Importing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-run-down">Feature run-down</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-environment-features">(i) <code class="docutils literal notranslate"><span class="pre">Environment</span></code> features</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#walls"><strong>Walls</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-environments-polygons-curves-and-holes"><strong>Complex <code class="docutils literal notranslate"><span class="pre">Environment</span></code>s: Polygons, curves, and holes</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#objects"><strong>Objects</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-conditions"><strong>Boundary conditions</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#or-2-dimensions"><strong>1–or-2-dimensions</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-agent-features">(ii) <code class="docutils literal notranslate"><span class="pre">Agent</span></code> features</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#random-motion-model"><strong>Random motion model</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-trajectories"><strong>Importing trajectories</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#policy-control"><strong>Policy control</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#wall-repelling"><strong>Wall repelling</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-agents"><strong>Multiple <code class="docutils literal notranslate"><span class="pre">Agent</span></code>s</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-agent-classes"><strong>Advanced <code class="docutils literal notranslate"><span class="pre">Agent</span></code> classes</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-neurons-features">(iii) <code class="docutils literal notranslate"><span class="pre">Neurons</span></code> features</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-cell-types"><strong>Multiple cell types:</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#noise"><strong>Noise</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#spiking">Spiking</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rate-maps"><strong>Rate maps</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#place-cell-models"><strong>Place cell models</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#geometry-of-placecells"><strong>Geometry of <code class="docutils literal notranslate"><span class="pre">PlaceCells</span></code></strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#egocentric-encodings"><strong>Egocentric encodings</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reinforcement-learning-and-successor-features"><strong>Reinforcement Learning and Successor Features</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#neurons-as-function-approximators"><strong><code class="docutils literal notranslate"><span class="pre">Neurons</span></code> as function approximators</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-your-own-neuron-types"><strong>Creating your own <code class="docutils literal notranslate"><span class="pre">Neuron</span></code> types</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iv-figures-and-animations">(iv) Figures and animations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#saving"><strong>Saving</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-but-automatically"><strong>Saving (but automatically)</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#styling"><strong>Styling</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#most-important-plotting-functions"><strong>Most important plotting functions</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-scripts">Example Scripts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contribute">Contribute    </a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cite">Cite </a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="_sources/index.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2022, Tom George.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
